@@ -12,7 +12,8 @@ module.exports = {
     },
     output: {
         filename: 'bundle.js',
-        path: BUILD_DIR
+        path: BUILD_DIR,
+        publicPath: 'Configurator3D/'
     },
     module: {
         rules: [
@@ -24,7 +25,7 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(png|svg|jpg|gif)$/,
+                test: /\.(png|svg|jpg|gif|gltf)$/,
                 use: [
                     'file-loader',
                 ],

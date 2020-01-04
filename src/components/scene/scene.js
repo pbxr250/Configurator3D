@@ -116,7 +116,7 @@ export function init() {
     initEventListeners();
     
     // Load Models
-    new GLTFLoader().load( '/assets/models/cpt3.gltf', onModelLoad );
+    new GLTFLoader().load( './assets/models/cpt3.gltf', onModelLoad );
 
     render();
 }
@@ -158,7 +158,7 @@ function onModelLoad( gltf ) {
 	// load a resource
 	loader.load(
 		// resource URL
-		'/assets/textures/wood2.jpg',
+		'./assets/textures/wood2.jpg',
 
 		// onLoad callback
 		function ( texture ) {
@@ -182,7 +182,7 @@ function onModelLoad( gltf ) {
 
 	loader.load(
 		// resource URL
-		'/assets/textures/door/d1.png',
+		'./assets/textures/door/d1.png',
 	
 		// onLoad callback
 		function ( texture ) {
@@ -213,10 +213,10 @@ function onModelLoad( gltf ) {
 
 function loadTextures() {
 	let loader = new THREE.TextureLoader();
-	let texture = loader.load('/assets/textures/door/d2.png');
+	let texture = loader.load('./assets/textures/door/d2.png');
 	texture.flipY=false;
 	textures.push( texture );
-	texture = loader.load('/assets/textures/door/d3.png');
+	texture = loader.load('./assets/textures/door/d3.png');
 	texture.flipY=false;
 	textures.push( texture );
 }
